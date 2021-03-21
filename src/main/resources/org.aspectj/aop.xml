@@ -1,0 +1,15 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+
+	<weaver>
+		<include within="com.flights.api.aspect.*" />
+		<include within="org.springframework.boot..*" />
+	</weaver>
+
+	<aspects>
+		<aspect name="com.flights.api.aspect.Interceptor" />
+		<aspect name="com.flights.api.aspect.RezervarePriceValidation" />
+		<aspect name="com.flights.api.aspect.SeatsPopulationAspect" />
+	</aspects>
+
+</aspectj>

@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "description": "Flights UI",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "rest",
+    "hateoas",
+    "spring",
+    "data",
+    "react"
+  ],
+  "author": "Trocan Eduard Valentin",
+  "dependencies": {
+    "axios": "0.19.2",
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.1",
+    "ramda": "^0.27.0",
+    "react": "^16.5.2",
+    "react-datepicker": "^3.4.1",
+    "react-dom": "^16.5.2",
+    "react-router": "5.1.2",
+    "react-router-dom": "5.1.2",
+    "react-select": "^3.1.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
+  },
+  "scripts": {
+    "watch": "webpack --watch -d",
+    "webpack-dev-server": "webpack-dev-server",
+    "dev": "webpack-dev-server --mode=development"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "^7.9.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "bootstrap": "^4.5.3",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "path": "^0.12.7",
+    "react-bootstrap": "^1.4.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
