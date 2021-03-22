@@ -1,5 +1,6 @@
 package com.flights.api.service;
 
+import com.flights.api.aspect.Interceptor;
 import com.flights.api.dto.AvionViewDto;
 import com.flights.api.dto.CreateAvionDto;
 import com.flights.api.dto.LocViewDto;
@@ -9,6 +10,8 @@ import com.flights.api.model.Avion;
 import com.flights.api.model.MarcaAvion;
 import com.flights.api.repository.AvionRepository;
 import com.flights.api.repository.LocRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +21,8 @@ import static java.util.stream.Collectors.toList;
 
 @Service
 public class AvionService {
+
+    private static final Logger logger = LoggerFactory.getLogger(AvionService.class);
 
     private final AvionRepository avionRepository;
     private final EntityMapper entityMapper;
@@ -52,8 +57,15 @@ public class AvionService {
 
     public Avion add(CreateAvionDto avionDTO, MarcaAvion marcaAvion) {
 
+        mockPrivateMethod();
+
         Avion avion = entityMapper.toAvion(avionDTO, marcaAvion);
 
         return avionRepository.save(avion);
+    }
+
+    private void mockPrivateMethod() {
+
+        logger.info("Inside mock private method on AvionService");
     }
 }
